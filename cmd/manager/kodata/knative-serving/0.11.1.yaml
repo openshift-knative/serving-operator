@@ -62,7 +62,16 @@ rules:
   - autoscaling.internal.knative.dev
   - caching.internal.knative.dev
   resources:
-  - '*'
+  - certificates
+  - configurations
+  - images
+  - ingresses
+  - metrics
+  - podautoscalers
+  - revisions
+  - routes
+  - serverlessservices
+  - services
   verbs:
   - '*'
 ---
@@ -80,7 +89,16 @@ rules:
   - autoscaling.internal.knative.dev
   - caching.internal.knative.dev
   resources:
-  - '*'
+  - certificates
+  - configurations
+  - images
+  - ingresses
+  - metrics
+  - podautoscalers
+  - revisions
+  - routes
+  - serverlessservices
+  - services
   verbs:
   - create
   - update
@@ -101,7 +119,16 @@ rules:
   - autoscaling.internal.knative.dev
   - caching.internal.knative.dev
   resources:
-  - '*'
+  - certificates
+  - configurations
+  - images
+  - ingresses
+  - metrics
+  - podautoscalers
+  - revisions
+  - routes
+  - serverlessservices
+  - services
   verbs:
   - get
   - list
