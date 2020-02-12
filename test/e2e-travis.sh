@@ -27,8 +27,6 @@ kubectl logs deployment/knative-serving-operator
 kubectl get pod --all-namespaces
 kubectl get knativeserving --all-namespaces -o yaml
 
-test_setup
-
 NODE_PORT=$(kubectl get svc istio-ingressgateway -n istio-system -o jsonpath="{.spec.ports[?(@.port==80)].nodePort}")
 NODE_IP=$(kubectl get node -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
 
