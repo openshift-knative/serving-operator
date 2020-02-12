@@ -18,7 +18,7 @@ before_script:
 - touch $KUBECONFIG
 - sudo minikube start --vm-driver=none --kubernetes-version=v1.13.0 --extra-config=apiserver.enable-admission-plugins="LimitRanger,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,DefaultStorageClass,MutatingAdmissionWebhook"
 - "sudo chown -R travis: /home/travis/.minikube/"
-- go get -u github.com/google/ko/cmd/ko
+- curl -Lo ko.tar.gz https://github.com/google/ko/releases/download/v0.2.0/ko_0.2.0_Linux_x86_64.tar.gz && tar xvf ko.tar.gz && sudo mv ko /usr/local/bin/ 
 
 script:
 - kubectl cluster-info
