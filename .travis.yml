@@ -21,4 +21,4 @@ before_script:
 
 script:
 - kubectl cluster-info
-- test/e2e-travis.sh
+- test/e2e-tests.sh
