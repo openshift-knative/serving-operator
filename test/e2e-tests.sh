@@ -28,11 +28,6 @@
 
 source $(dirname $0)/e2e-common.sh
 
-function knative_setup() {
-  install_istio || fail_test "Istio installation failed"
-  install_serving_operator
-}
-
 # Skip installing istio as an add-on
 initialize $@ --skip-istio-addon
 

@@ -48,6 +48,11 @@ function istio_yaml() {
   echo "third_party/istio-${istio_version}/istio${suffix}.yaml"
 }
 
+function knative_setup() {
+  install_istio || fail_test "Istio installation failed"
+  install_serving_operator
+}
+
 # Install Istio.
 function install_istio() {
   local base_url="https://raw.githubusercontent.com/knative/serving/v${LATEST_SERVING_RELEASE_VERSION}"
